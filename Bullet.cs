@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour {
         if (other.GetComponent<Zombie>() != null) {
             
             Zombie zombie = other.GetComponent<Zombie>();
-            zombie.TakeDamage(Weapons.DamageWeapon);
+            zombie.TakeDamage(Equipment.DamageWeapon);
         }
         DestroyBullet();
     }

@@ -3,8 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     
     [SerializeField] private int maxHealth = 5;
-    [SerializeField] private float speed = 6f;
-    
+
     private int _currentHealth;
     private float _angle;
     
@@ -12,16 +11,16 @@ public class Player : MonoBehaviour {
     private Vector2 _moveVelocity;
     private Vector2 _mousePosition;
     private Vector2 _lookDirection;
+    private Rigidbody2D _rigidbody;
 
-    // Ссылки
+    [Header("Ссылки")]
     [SerializeField] private Joystick joystick;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private Camera cam;
-    private Rigidbody2D _rigidbody;
 
     private void Awake() {
 
-        TakeWeapon(Weapons.GunSet.AK74);
+        TakeWeapon(Equipment.GunSet.AK74);
         
         _currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -31,7 +30,7 @@ public class Player : MonoBehaviour {
     private void Update() {
         _moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         // _moveInput = new Vector2(joystick.Horizontal, joystick.Vertical); -> УПРАВЛЕНИЕ ДЛЯ Android
-        _moveVelocity = _moveInput.normalized * speed;
+        _moveVelocity = _moveInput.normalized * Equipment.SpeedWithWeapon;
         _rigidbody.MovePosition(_rigidbody.position + _moveVelocity * Time.fixedDeltaTime);
     
         _mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -46,8 +45,12 @@ public class Player : MonoBehaviour {
 
         if (_currentHealth <= 0) Destroy(gameObject);
     }
+
+    private void SetEquipmentKit() {
+        maxHealth = 7;
+    }
     
-    private void TakeWeapon(Weapons.GunSet weapon) {
-        Weapons.ChangeWeapon(weapon);
+    private void TakeWeapon(Equipment.GunSet weapon) {
+        Equipment.SelectWeapon(weapon);
     }
 }
