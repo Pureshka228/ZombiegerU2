@@ -1,2 +1,2 @@
 # ZombiegerU2
-Code for UNITY Top-Down shooter 3D game
+Code for UNITY Top-Down shooter 2D game
