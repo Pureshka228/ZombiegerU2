@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
-    [Header("Ссылки")]
+    [Header("References")]
     [SerializeField] private Slider slider;
     [SerializeField] private Gradient gradient;
     [SerializeField] private Image fill;

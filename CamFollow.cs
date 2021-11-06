@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CamFollow : MonoBehaviour {
     
+    [Header("References")]
     [SerializeField] private Transform player;
     [SerializeField] private Vector3 offset;
 

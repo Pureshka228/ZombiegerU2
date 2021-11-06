@@ -1,13 +1,11 @@
 using UnityEngine;
 
-public class Equipment : MonoBehaviour {
+public class Weapons : MonoBehaviour {
     
     public static int DamageWeapon, BulletSpeed, MagazineSize, BulletPerTap;
     public static float ReloadTime, SpeedWithWeapon, TimeBetweenShooting, TimeBetweenShots;
-
-    public static bool EquipmentKit;
-
-    public enum GunSet { USPExpert, AK74, M4A1, MP5, AWP};
+    
+    public enum GunSet { USPExpert, AK74, M4A1, MP5, AWP };
 
     public static void SelectWeapon(GunSet gunSet) {
         switch (gunSet) {
