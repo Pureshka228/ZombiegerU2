@@ -6,7 +6,6 @@ public class Zombie : MonoBehaviour {
     
     private const int _MAX_HEALTH = 5;
     private int _currentHealth;
-    private int damageZombie = 1;
 
     private void Start() {
         _currentHealth = _MAX_HEALTH;

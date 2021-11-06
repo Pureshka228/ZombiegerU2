@@ -11,7 +11,7 @@ public class Weapons : MonoBehaviour {
         switch (gunSet) {
             case GunSet.USPExpert:
                 DamageWeapon = 1;
-                BulletSpeed = 160;
+                BulletSpeed = 25;
                 SpeedWithWeapon = 7f;
                 MagazineSize = 12;
                 BulletPerTap = 1;
@@ -21,7 +21,7 @@ public class Weapons : MonoBehaviour {
                 break;
             case GunSet.AK74:
                 DamageWeapon = 1;
-                BulletSpeed = 200;
+                BulletSpeed = 30;
                 SpeedWithWeapon = 5f;
                 MagazineSize = 30;
                 BulletPerTap = 1;
@@ -31,7 +31,7 @@ public class Weapons : MonoBehaviour {
                 break;
             case GunSet.M4A1:
                 DamageWeapon = 1;
-                BulletSpeed = 190;
+                BulletSpeed = 28;
                 SpeedWithWeapon = 5f;
                 MagazineSize = 25;
                 BulletPerTap = 1;
@@ -41,7 +41,7 @@ public class Weapons : MonoBehaviour {
                 break;
             case GunSet.MP5:
                 DamageWeapon = 1;
-                BulletSpeed = 180;
+                BulletSpeed = 26;
                 SpeedWithWeapon = 6f;
                 MagazineSize = 30;
                 BulletPerTap = 1;
@@ -51,7 +51,7 @@ public class Weapons : MonoBehaviour {
                 break;
             case GunSet.AWP:
                 DamageWeapon = 4;
-                BulletSpeed = 250;
+                BulletSpeed = 40;
                 SpeedWithWeapon = 5f;
                 MagazineSize = 10;
                 BulletPerTap = 1;
